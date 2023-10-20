@@ -36,6 +36,12 @@ function minus () {
   tempNum = "";
   operator = "minus";
 }
+function multiply () {
+  display.innerHTML = "";
+  firstNum = tempNum;
+  tempNum = "";
+  operator = "cross";
+}
 function result() {
   secondNum = tempNum;
   tempNum = "";
@@ -43,6 +49,8 @@ function result() {
     res = +firstNum + +secondNum;
   } else if (operator === "minus") {
     res = +firstNum - +secondNum;
+  } else if (operator === "cross") {
+    res = +firstNum * +secondNum;
   }
   display.innerHTML = res;
 }
