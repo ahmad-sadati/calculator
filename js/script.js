@@ -25,6 +25,22 @@ function minus() {
   tempNum = "";
   operator = "minus";
 }
+function multiply() {
+  // display.innerHTML = "";
+  if (firstNum === undefined) {
+    firstNum = tempNum;
+    console.log(5);
+  } else if (tempNum !== "") {
+    result();
+    console.log(10);
+  }
+  else{
+    // do nothing
+    console.log(15);
+  }
+  tempNum = "";
+  operator = "multiple";
+}
 function result() {
   secondNum = tempNum;
   tempNum = "";
@@ -33,6 +49,17 @@ function result() {
   } else if (operator === "minus") {
     res = +firstNum - +secondNum;
   }
+  else if (operator === "multiple" && secondNum !== "") {
+    res = +firstNum * +secondNum
+  }
+  else {
+    // do nothing
+    console.log(20);
+  }
   display.innerHTML = res;
   firstNum = res;
+  // console.log(firstNum);
+  // console.log(secondNum);
+  // console.log(res);
+
 }
