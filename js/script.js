@@ -41,6 +41,22 @@ function multiply() {
   tempNum = "";
   operator = "multiple";
 }
+function divide() {
+  // display.innerHTML = "";
+  if (firstNum === undefined) {
+    firstNum = tempNum;
+    console.log(5);
+  } else if (tempNum !== "") {
+    result();
+    console.log('taghsim');
+  }
+  else{
+    // do nothing
+    console.log(15);
+  }
+  tempNum = "";
+  operator = "dividedby";
+}
 function result() {
   secondNum = tempNum;
   tempNum = "";
@@ -51,6 +67,9 @@ function result() {
   }
   else if (operator === "multiple" && secondNum !== "") {
     res = +firstNum * +secondNum
+  }
+  else if (operator === "dividedby" && secondNum !== "") {
+    res = +firstNum / +secondNum
   }
   else {
     // do nothing
